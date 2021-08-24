@@ -22,15 +22,23 @@ document.getElementById('add-gb').addEventListener('click', function () {
 })
 
 document.getElementById('minus-gb').addEventListener('click', function () {
-    //Make it so the quantity of gb cookies -1 but no less than 0
-    document.getElementById('qty-gb').textContent = --gb
-    document.getElementById('qty-total').textContent = --totalCookies
+    //Make it so the quantity of gb cookies -1 but no less than 0    
+    if (gb <= 0) {
+        console.log('ha')
+    } else {
+        document.getElementById('qty-gb').textContent = --gb
+        document.getElementById('qty-total').textContent = --totalCookies
+    }
 })
 
 document.getElementById('minus-cc').addEventListener('click', function () {
     //make is so quantity of cc cookies -1 but no less than 0
-    document.getElementById('qty-cc').textContent = --cc
-    document.getElementById('qty-total').textContent = --totalCookies
+    if (cc <= 0) {
+        console.log('ha')
+    } else {
+        document.getElementById('qty-cc').textContent = --cc
+        document.getElementById('qty-total').textContent = --totalCookies
+    }
 })
 
 document.getElementById('add-cc').addEventListener('click', function () {
@@ -47,7 +55,11 @@ document.getElementById('add-sugar').addEventListener('click', function () {
 
 document.getElementById('minus-sugar').addEventListener('click', function () {
     //make is so quantity of sugar cookies -1 but no less than 0
-    document.getElementById('qty-sugar').textContent = --sugar
-    document.getElementById('qty-total').textContent = --totalCookies
+    if (sugar <= 0) {
+        console.log('ha')
+    } else {
+        document.getElementById('qty-sugar').textContent = --sugar
+        document.getElementById('qty-total').textContent = --totalCookies
+    }
 })
 
